@@ -1,0 +1,15 @@
+<!-- Creates an unordered list with the specified number of the provided type of posts. -->
+<!-- See also: https://gohugo.io/content-management/types/ -->
+<!-- Example usage: {{< latest-posts 3 "blog" >}} (NOTE: you may need to remove this example usage because Hugo will try to evaluate it by default) -->
+
+{{ $numberOfPostsToList := .Get 0 }}
+
+{{ $typeOfPostsToList := .Get 1 }}
+
+<ul>
+{{ range ( first $numberOfPostsToList ( where .Site.Pages "Type" $typeOfPostsToList ) ) }}
+    <li>
+        <a href="{{.Permalink}}">{{.Title}}</a>
+    </li>
+{{ end }}
+</ul>

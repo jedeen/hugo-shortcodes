@@ -1,0 +1,6 @@
+<!-- Returns the number of years between the provided input year and the current year. -->
+<!-- Example usage:  {{< years-since 2013 >}} (NOTE: you may need to remove this example usage because Hugo will try to evaluate it by default) -->
+
+{{ $inputYear := .Get 0 }}
+
+{{ sub now.Year $inputYear }}

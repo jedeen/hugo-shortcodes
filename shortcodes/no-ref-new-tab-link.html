@@ -1,0 +1,4 @@
+<!-- Creates a link that opens in a new tab and does not provide reference information to the destination of the link. -->
+<!-- Example usage: {{< no-ref-link "https://git-scm.com/" "Git" >}} (NOTE: you may need to remove this example usage because Hugo will try to evaluate it by default) -->
+
+<a href="{{.Get 0}}" target="_blank" rel="noopener noreferrer">{{.Get 1}}</a>
